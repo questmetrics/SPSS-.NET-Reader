@@ -17,7 +17,7 @@ namespace SpssLib.FileParser.Records
         /// it must be set after reading the <see cref="MachineIntegerInfoRecord"/>. Because of that,
         /// this method should not be invoked before that record is read.
         /// </remarks>
-        internal Encoding Encoding
+        public virtual Encoding Encoding
         {
             get
             {
@@ -31,7 +31,7 @@ namespace SpssLib.FileParser.Records
                 }
                 return _headerEncoding;
             }
-            set { _headerEncoding = value; }
+            protected set { _headerEncoding = value; }
         }
     }
 }

@@ -12,12 +12,12 @@ namespace SpssLib.FileParser.Records
 
         public string Name { get; private set; }
         
-        public Encoding Encoding { get; private set; }
+        public override Encoding Encoding { get; protected set; }
 
         internal CharacterEncodingRecord()
         {}
 
-		internal CharacterEncodingRecord(Encoding encoding)
+        internal CharacterEncodingRecord(Encoding encoding)
 		{
             ItemSize = 1;
             // Supposedly has to be the IANA name
